@@ -1,0 +1,28 @@
+class Counter
+{
+    // Приватне статичне поле для лічильника
+    private static int count = 0;
+
+    // Метод для збільшення лічильника
+    public static void Increment()
+    {
+        count++;
+    }
+
+    // Метод для виведення лічильника на екран
+    public static void DisplayCount()
+    {
+        Console.WriteLine($"Current count: {count}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Counter.Increment();
+        Counter.Increment();
+        Counter.Increment();
+        Counter.DisplayCount(); // буде 3 тому, що Counter.Increment(); викликається 3 рази"
+    }
+}
